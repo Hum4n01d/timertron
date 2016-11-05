@@ -1,0 +1,17 @@
+{
+  "name": "electron_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "electron-compile": "^3.3.6"
+  },
+  "devDependencies": {
+    "electron-compilers": "^4.0.3"
+  },
+  "scripts": {
+    "start": "electron-compile ."
+  },
+  "author": "",
+  "license": "ISC"
+}

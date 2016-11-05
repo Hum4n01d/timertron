@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Timer</title>
+        <link href="stylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <section id="body">
+            <form id="timer-form">
+                <input type="text" name="timer-length" value="" placeholder="Minutes">
+                <button id="start-timer">Start</button>
+            </form>
+            <div id="timer">
+                <p id="timer-minutes"></p>
+                <span id="timer-ticker">:</span>
+                <p id="timer-seconds"></p>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        // You can also require other files to run in this process
+        window.$ = window.jQuery = require('jquery')
+        require('./renderer.js')
+    </script>
+</html>
