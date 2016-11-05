@@ -35,12 +35,11 @@ var theTimer = new Timer(function() {
     clearInterval(interval);
 
     var timerDoneNotification = new Notification('Timer done', {
-      body: 'Your '+timer.length+' second timer is finished'
+      body: 'Your '+theTimer.length+' second timer is finished'
     })
 
     delete timer
 
-    $('#timer-form').show()
     $('#body').removeClass('timer-on')
     timerDoneNotification.onclick = () => {
       console.log('Notification clicked')
@@ -53,10 +52,12 @@ $('#timer-form input').focus()
 
 var interval;
 
-$('button#start-timer').click(function(event) {
+$('#timer-form').submit(function(event) {
     event.preventDefault()
 
-    var minutes = parseFloat($(this).siblings('input').val()) * 60
+    var minutes = parseFloat($(this).children('input').val()) * 60
+
+    console.log(minutes);
 
     if (isNaN(minutes)) {
         alert('Please enter a number')
@@ -67,11 +68,6 @@ $('button#start-timer').click(function(event) {
             theTimer.update()
         }, 1000)
 
-        $(this).parent().hide()
-        $('#timer').css({
-            marginTop: '-20px',
-            height: '100vh'
-        });
         $('#body').addClass('timer-on')
     }
 });
