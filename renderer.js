@@ -58,7 +58,7 @@ $('button#start-timer').click(function(event) {
 
     var minutes = parseFloat($(this).siblings('input').val()) * 60
 
-    if (isNaN(length)) {
+    if (isNaN(minutes)) {
         alert('Please enter a number')
     } else {
         theTimer.start(minutes);
@@ -66,12 +66,12 @@ $('button#start-timer').click(function(event) {
             theTimer.time--
             theTimer.update()
         }, 1000)
-    }
 
-    $(this).parent().hide()
-    $('#timer').css({
-        marginTop: '-20px',
-        height: '100vh'
-    });
-    $('#body').addClass('timer-on')
+        $(this).parent().hide()
+        $('#timer').css({
+            marginTop: '-20px',
+            height: '100vh'
+        });
+        $('#body').addClass('timer-on')
+    }
 });
