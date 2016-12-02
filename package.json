@@ -1,5 +1,5 @@
 {
-  "name": "electron_test",
+  "name": "timertron",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,9 +11,6 @@
     "electron-packager": "^8.2.0"
   },
   "scripts": {
-    "start": "electron-compile .",
-    "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=./clock.icns --overwrite --version=1.4.5",
-    "package-win": "electron-packager ./ Timertron --platform=win32 --arch=x64 --overwrite --version=1.4.5"
   },
   "author": "",
   "license": "ISC"
