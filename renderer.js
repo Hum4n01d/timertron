@@ -1,49 +1,28 @@
-var Timer = function(callback) {
-    this.$el = $('#timer')
-    this.length = 0
-    this.time = 0
-    this.update = function() {
-        if (this.time == -1) {
-            this.callback();
-            this.time = 0;
-        }
+var Timer = require('./timer.js');
+var mac = process.platform;
 
-        this.render()
-    }
-    this.render = function() {
-        var minutes = Math.floor(this.time / 60);
-        var seconds = this.time - minutes * 60;
-
-        if (seconds < 10) {
-            seconds = '0'+seconds
-        }
-
-        this.$el.children('#timer-minutes').text(minutes)
-        this.$el.children('#timer-seconds').text(seconds);
-    }
-    this.start = function(minutes) {
-        this.length = minutes
-        this.time = minutes
-        this.render()
-    }
-    this.callback = callback
-
-    this.update()
+if (!mac) {
+    $('header').remove();
+} else {
+    $('#timer').addClass('mac');
 }
 
 var theTimer = new Timer(function() {
     clearInterval(interval);
 
-    var timerDoneNotification = new Notification('Timer done', {
-      body: 'Your '+theTimer.length+' second timer is finished'
-    })
+    var msg = 'Your '+theTimer.minutes+' minute timer is finished'
+
+    if (mac) {
+        var timerDoneNotification = new Notification('Timer done', {
+          body: msg
+        })
+    } else {
+        alert(msg);
+    }
 
     delete timer
 
     $('#body').removeClass('timer-on')
-    timerDoneNotification.onclick = () => {
-      console.log('Notification clicked')
-    }
 })
 
 theTimer.render()
@@ -55,18 +34,16 @@ var interval;
 $('#timer-form').submit(function(event) {
     event.preventDefault()
 
-    var minutes = parseFloat($(this).children('input').val()) * 60
-
-    console.log(minutes);
+    var minutes = parseFloat($(this).children('input').val())
 
     if (isNaN(minutes)) {
         alert('Please enter a number')
     } else {
         theTimer.start(minutes);
         interval = setInterval(function() {
-            theTimer.time--
+            theTimer.seconds--
             theTimer.update()
-        }, 1000)
+        }, 50)
 
         $('#body').addClass('timer-on')
     }
