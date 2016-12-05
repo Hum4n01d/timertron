@@ -1,0 +1,17 @@
+{
+  "name": "timertron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.3.0"
+  },
+  "scripts": {
+    "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
