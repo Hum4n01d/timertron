@@ -1,5 +1,4 @@
-build/
-node_modules
+Timertron-*
 .cache/
 node_modules/\.bin
 npm-debug.log
