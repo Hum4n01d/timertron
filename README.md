@@ -15,3 +15,6 @@ Install the dependencies:
 
 Start the app with
 `npm start` or `electron .` if you have electron installed (`npm install electron -g`)
+
+In addition, if you really really want it, heres a one-liner:
+`git clone https://github.com/hum4n01d/timertron && cd timertron && npm install && npm start`
