@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "electron": "^1.4.10",
     "jquery": "^3.1.1"
   },
   "devDependencies": {
@@ -12,6 +13,6 @@
   "scripts": {
     "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5"
   },
-  "author": "",
+  "author": "Hum4n01d",
   "license": "ISC"
 }
