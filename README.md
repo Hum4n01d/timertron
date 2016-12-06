@@ -13,5 +13,5 @@ Clone the repository and open the folder:
 Install the dependencies:
 `npm install`
 
-Start the app
-`npm start` or `electron .` if you have electron installed (`npm install electron -g`
+Start the app with
+`npm start` or `electron .` if you have electron installed (`npm install electron -g`)
