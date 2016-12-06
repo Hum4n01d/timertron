@@ -20,7 +20,7 @@ var theTimer = new Timer(function() {
     }
     setTimeout(function() {
         alert(msg);
-    }, 1000);
+    }, 500);
 
     delete timer
 
