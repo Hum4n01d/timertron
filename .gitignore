@@ -2,3 +2,4 @@ Timertron-*
 .cache/
 node_modules/\.bin
 npm-debug.log
+node_modules/
