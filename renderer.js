@@ -17,8 +17,10 @@ var theTimer = new Timer(function() {
           body: msg
         })
     } else {
-        alert(msg);
     }
+    setTimeout(function() {
+        alert(msg);
+    }, 1000);
 
     delete timer
 
@@ -43,7 +45,7 @@ $('#timer-form').submit(function(event) {
         interval = setInterval(function() {
             theTimer.seconds--
             theTimer.update()
-        }, 50)
+        }, 1000)
 
         $('#body').addClass('timer-on')
     }
