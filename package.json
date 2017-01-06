@@ -1,18 +1,19 @@
 {
-  "name": "timertron",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "electron": "^1.4.10",
-    "jquery": "^3.1.1"
-  },
-  "devDependencies": {
-    "electron-packager": "^8.3.0"
-  },
-  "scripts": {
-    "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5 --overwrite"
-  },
-  "author": "Hum4n01d",
-  "license": "ISC"
+    "name": "timertron",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "electron": "^1.4.10",
+        "jquery": "^3.1.1"
+    },
+    "devDependencies": {
+        "electron-packager": "^8.3.0"
+    },
+    "scripts": {
+        "start": "electron .",
+        "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5 --overwrite"
+    },
+    "author": "Hum4n01d",
+    "license": "ISC"
 }
