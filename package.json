@@ -12,7 +12,8 @@
     },
     "scripts": {
         "start": "electron .",
-        "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5 --overwrite"
+        "package": "electron-packager ./ Timertron --platform=darwin --arch=x64 --icon=clock.icns --version=1.4.5 --overwrite",
+        "build": "npm install; npm start"
     },
     "author": "Hum4n01d",
     "license": "ISC"
