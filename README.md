@@ -10,11 +10,8 @@ Perquisite: Have NodeJS and NPM installed
 Clone the repository and open the folder:
 `git clone https://github.com/hum4n01d/timertron && cd timertron`
 
-Install the dependencies:
-`npm install`
-
-Start the app with
-`npm start` or `electron .` if you have electron installed (`npm install electron -g`)
+Build the app:
+`npm run build`
 
 In addition, if you really really want it, heres a one-liner:
-`git clone https://github.com/hum4n01d/timertron && cd timertron && npm install && npm start`
+`git clone https://github.com/hum4n01d/timertron && cd timertron; npm run build`
