@@ -14,4 +14,4 @@ Build the app:
 `npm run build`
 
 In addition, if you really really want it, heres a one-liner:
-`git clone https://github.com/hum4n01d/timertron && cd timertron; npm run build`
+`git clone https://github.com/hum4n01d/timertron; cd timertron; npm run build`
