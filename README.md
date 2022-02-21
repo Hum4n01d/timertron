@@ -1,17 +1,17 @@
-# Timertron
-Timertron - A simple cross-platform timer app written in Electron and Javascript
+# Timertron - Dead simple cross-platform timer app
 
-To get install Timertron on macOS, go to the [releases page](https://github.com/Hum4n01d/Timertron/releases)
+<img width="512" alt="fixed-Screen Shot 2022-02-21 at 12 38 08 PM" src="https://user-images.githubusercontent.com/17228477/155023473-a0b3bcf1-ef87-4f57-9134-35f15d292da7.png">
 
-To clone the repository and get it running with node follow the following :) instructions:
+Installation instructions:
 
-Perquisite: Have NodeJS and NPM installed
+1. Clone the repository and open the folder:
 
-Clone the repository and open the folder:
-`git clone https://github.com/hum4n01d/timertron && cd timertron`
+```
+git clone https://github.com/hum4n01d/timertron && cd timertron
+```
 
-Build the app:
-`npm run build`
+2. Install dependencies and run the app:
 
-In addition, if you really really want it, heres a one-liner:
-`git clone https://github.com/hum4n01d/timertron; cd timertron; npm run build`
+```
+npm install && npm start
+```
